@@ -1,0 +1,21 @@
+Microsoft Windows [Version 10.0.18362.959]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\user>ping jhta.co.kr
+
+Ping jhta.co.kr [119.205.197.57] 32바이트 데이터 사용:
+요청 시간이 만료되었습니다.
+요청 시간이 만료되었습니다.
+요청 시간이 만료되었습니다.
+요청 시간이 만료되었습니다.
+
+119.205.197.57에 대한 Ping 통계:
+    패킷: 보냄 = 4, 받음 = 0, 손실 = 4 (100% 손실),
+
+C:\Users\user>cd day15
+지정된 경로를 찾을 수 없습니다.
+
+C:\Users\user>cd day16
+지정된 경로를 찾을 수 없습니다.
+
+C:\Users\user>
