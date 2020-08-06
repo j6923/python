@@ -10,7 +10,7 @@ class MyApp(QWidget): #얘를 상속받은 클래스 됨, 나도 위잿이 될 �
     def initUI(self):  #Ui관련된것 
         self.setGeometry(100,100,1000,800) #xy너비높이 
         #전체 폼  #전체 레이아웃은 폼 박스로 가져옴. 전체 수평폼 레이아웃 
-        frmbox = QHBoxLayout() #수평박스 레이아웃 쓸거예요/ 
+        frmbox = QHBoxLayout() #수평박스 레이아웃 쓸거예요
         self.setLayout(frmbox) #수평박스 레이아웃 적용해줘 
 
         #좌측 레이아웃
