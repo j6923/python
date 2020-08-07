@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Berryz WebShare</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="expires" content="mon, 06 jan 1990 00:00:01 GMT" />
+	<link rel="stylesheet" type="text/css" href="/.default/dev-style.css?action=SkinFile" />
+	<script src="/.default/common.js?action=SkinFile"></script>
+	<script src="/.default/sortabletable.js?action=SkinFile"></script>
+</head>
+
+<body bgcolor="#FFFFFF">
+	<form id="pluginForm" method='POST' action=''>
+		<input type="HIDDEN" name="selectedFiles" value="">
+	</form>
+	<div class="header">
+		<a href="/"><img src="/.default/logo.png?action=SkinFile" border="0" alt="UPnL Berryz WebShare" /></a>
+	</div>
+	<div id = "titleContainer" class="title" border='1'>
+		
+		
+		
+		
+	</div>
+	
+		<script type="text/javascript">
+		<!--
+			write_split_address("/share/img/");
+		-->
+		</script>
+	
+	<div class="content">
+	
+	
+		<div style='width:100%'>
+			<div style='margin-left:20px; float:left;'>
+				
+					<a href='..'>
+						<img alt=".." src="/.default/folder_upper.gif?action=SkinFile" /> 상위 폴더로</a>
+				
+
+				
+					<img alt="Upload" style='margin-left:14px;' src="/.default/upload.gif?action=SkinFile" /> <font style='color:#aaaaaa;'>업로드</font>
+				
+
+				
+					<img alt="Create Folder" style='margin-left:14px;' src="/.default/folder_mkdir.gif?action=SkinFile" /> <font style='color:#aaaaaa;'>새 폴더</font>
+				
+
+				<img alt="Plugin" style='margin-left:14px;' src='/.default/plugin.gif?action=SkinFile' border='0' />
+				<select name="tact" onChange="OnPlugin(this)">
+					<option value="" selected>추가 기능...</option>
+					<option value="" disabled>-----------------------</option>
+					<option value="" disabled>선택된 대상에 적용:</option>
+					
+						 <option value="playlist.asx">&nbsp; &nbsp;asx 목록으로 스트리밍</option>  <option value="playlist.m3u">&nbsp; &nbsp;m3u 목록으로 스트리밍</option>  <option value="rardownload">&nbsp; &nbsp;RAR 파일로 묶어 받기</option>  <option value="zipdownload">&nbsp; &nbsp;ZIP 파일로 묶어 받기</option> 
+					
+					<option value="" disabled>다른 방식으로 보기:</option>
+					
+						 <option value="album">&nbsp; &nbsp;앨범 모드</option>  <option value="rss">&nbsp; &nbsp;RSS</option> 
+					
+				</select>
+			</div>
+			<div align='right' style='margin-right:20px; float:right;'>
+				
+				<a href='.?action=Login' style='margin-left:14px;'>
+					<img src='/.default/login.png?action=SkinFile' border='0' /> 로그인</a>
+				
+			</div>
+			<div style='clear:both;'>
+			</div>
+		</div>
+		
+		<form id="fileListForm" style='margin:0px; padding:0px;'>
+		<input type='hidden' name="checkboxes" style='margin:0px;'/>
+		<table class="sortable" id='fileListTable' cellspacing='0'>
+		<colgroup>
+			<col span="1" class="checkbox" />
+			<col span="1" class="icon" />
+			<col span="1" class="filename" />
+			<col span="1" class="filedate" />
+			<col span="1" class="filesize" />
+		</colgroup>
+		<thead>
+			<tr>
+				<th class="checkbox non_sortheader"><input type='CHECKBOX' name="selectAllCheckbox" onClick="ToggleSelectAll();" /></th>
+				<th class="icon non_sortheader">&nbsp;</th>
+				<th class="filename sortheader">이름</th>
+				<th class="filesize sortheader">크기</th>
+				<th class="filedate sortheader">수정한 날짜</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+			<tr class="fileentry" id="tr#bg.jpg">
+				<td class="checkbox">
+					<input type='checkbox' name="checkbox#bg.jpg" value="bg.jpg" onClick='HighlightRow("bg.jpg", this.checked)'/>
+				</td>
+				
+					<td class="icon"><img alt="F" src="/.default/file.gif?action=SkinFile" /></td>
+					<td class="filename"><a href="bg.jpg">bg.jpg</a></td>
+				
+				<td class="filesize" align="right">&nbsp;
+					187,073
+				</td>
+				<td class="filedate" align="right">&nbsp;
+					2014-03-27 AM 11:16
+				</td>
+			</tr>
+			
+			<tr class="fileentry" id="tr#hole.png">
+				<td class="checkbox">
+					<input type='checkbox' name="checkbox#hole.png" value="hole.png" onClick='HighlightRow("hole.png", this.checked)'/>
+				</td>
+				
+					<td class="icon"><img alt="F" src="/.default/file.gif?action=SkinFile" /></td>
+					<td class="filename"><a href="hole.png">hole.png</a></td>
+				
+				<td class="filesize" align="right">&nbsp;
+					4,188
+				</td>
+				<td class="filedate" align="right">&nbsp;
+					2014-03-27 AM 11:16
+				</td>
+			</tr>
+			
+			<tr class="fileentry" id="tr#rabbit1.png">
+				<td class="checkbox">
+					<input type='checkbox' name="checkbox#rabbit1.png" value="rabbit1.png" onClick='HighlightRow("rabbit1.png", this.checked)'/>
+				</td>
+				
+					<td class="icon"><img alt="F" src="/.default/file.gif?action=SkinFile" /></td>
+					<td class="filename"><a href="rabbit1.png">rabbit1.png</a></td>
+				
+				<td class="filesize" align="right">&nbsp;
+					31,313
+				</td>
+				<td class="filedate" align="right">&nbsp;
+					2014-03-27 AM 11:16
+				</td>
+			</tr>
+			
+			<tr class="fileentry" id="tr#rabbit2.png">
+				<td class="checkbox">
+					<input type='checkbox' name="checkbox#rabbit2.png" value="rabbit2.png" onClick='HighlightRow("rabbit2.png", this.checked)'/>
+				</td>
+				
+					<td class="icon"><img alt="F" src="/.default/file.gif?action=SkinFile" /></td>
+					<td class="filename"><a href="rabbit2.png">rabbit2.png</a></td>
+				
+				<td class="filesize" align="right">&nbsp;
+					31,092
+				</td>
+				<td class="filedate" align="right">&nbsp;
+					2014-03-27 AM 11:16
+				</td>
+			</tr>
+			
+			<tr class="fileentry" id="tr#snipe.png">
+				<td class="checkbox">
+					<input type='checkbox' name="checkbox#snipe.png" value="snipe.png" onClick='HighlightRow("snipe.png", this.checked)'/>
+				</td>
+				
+					<td class="icon"><img alt="F" src="/.default/file.gif?action=SkinFile" /></td>
+					<td class="filename"><a href="snipe.png">snipe.png</a></td>
+				
+				<td class="filesize" align="right">&nbsp;
+					13,751
+				</td>
+				<td class="filedate" align="right">&nbsp;
+					2014-03-27 AM 11:16
+				</td>
+			</tr>
+			
+			
+			
+			 <!--$files-->
+		</tbody>
+		</table>
+		</form>
+		
+		
+			<div class='totalAndFreeSpace'>
+			전체 크기: 267,417 바이트
+			
+				/ 디스크 여유 공간: 984,344,924,160 바이트
+			
+			</div>
+		
+	 <!--1-->
+	</div>
+
+	<script type="text/javascript">
+		var st1 = new SortableTable(
+			document.getElementById("fileListTable"),
+			["None", "None", "CaseInsensitiveString", "Number", "InvertTime"]
+			);
+		function ts_resortTable( v ){}
+	</script>
+
+	
+	<div class="footer">
+		Powered by 
+		<A href='http://berryz.upnl.org/webshare' class='footer' target='_blank'>Berryz WebShare
+		v0.952 (rev.1157)</A>
+		by 
+		<A href='http://upnl.org' class='footer' target='_blank'>UPnL</A>
+		<A href='http://berryz.upnl.org/main.php/WebShare/Info/' class='footer' target='_blank'>[Project Info]</A>
+		<A href='http://berryz.upnl.org/main.php/HelpUs' class='footer' target='_blank'>[Help Us]</A>
+<!--
+	<p id="validator">
+		<a href="http://validator.w3.org/check?uri=referer"><img
+			src="http://www.w3.org/Icons/valid-xhtml10"
+			alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+	</p>-->
+	</div>
+</body>
+</html>

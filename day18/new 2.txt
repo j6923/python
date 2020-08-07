@@ -1,0 +1,37 @@
+#hidden 폴더--- 평상시에 못 보게 감춰둔 폴더---
+그래서 /AppData써야지 볼 수 있음 
+
+c-사용자-user-AppData(공식적으로 공개하지 않는 것 들어있기도 함) 
+C:\Users\user\AppData\Local\Programs\Python\Python38\Scripts
+
+
+ pip install PyQt5.tools
+Collecting PyQt5.tools
+  Downloading pyqt5_tools-5.15.0.1.7-cp38-cp38-win_amd64.whl (57.4 MB)
+     |████████████████████████████████| 57.4 MB 301 kB/s 
+Collecting click
+  Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+     |████████████████████████████████| 82 kB 3.0 MB/s 
+Collecting python-dotenv
+  Downloading python_dotenv-0.14.0-py2.py3-none-any.whl (17 kB)
+Requirement already satisfied: pyqt5==5.15.0 in c:\users\user\appdata\local\programs\python\python38\lib\site-packages (from PyQt5.tools) (5.15.0)
+Requirement already satisfied: PyQt5-sip<13,>=12.8 in c:\users\user\appdata\local\programs\python\python38\lib\site-packages (from pyqt5==5.15.0->PyQt5.tools) (12.8.0)
+Installing collected packages: click, python-dotenv, PyQt5.tools
+Successfully installed PyQt5.tools click-7.1.2 python-dotenv-0.14.0
+PS E:\dev\python_workspace> 
+-------------------------------------------------------------------------------------
+
+Microsoft Windows [Version 10.0.18362.959]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\user>e:
+
+E:\>python -m PyQt5.uic.pyuic -x login.ui -o login.py
+
+E:\>
+
+
+
+
+
+

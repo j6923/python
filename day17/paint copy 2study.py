@@ -51,7 +51,7 @@ class MyApp(QWidget): #얘를 상속받은 클래스 됨, 나도 위잿이 될 �
         self.rbtnRect.clicked.connect(self.radioBtnClicked) #rbtnRect(사각형)에 클릭하는 시그널이 오면 처리하기 위해 rado호출 , 함수호출한다. 
         self.rbtnELLipse.clicked.connect(self.radioBtnClicked) #rbtnELLipse(타원)클릭하는 시그널이 오면 처리하기 위해 rado호출 , 함수호출한다. 
         #
-        self.rbtnLine.setChecked(True)  #이게 뭐지? 체크한다? 
+        self.rbtnLine.setChecked(True)  #버튼에 체크하는 애가 setchecked 그리고 true면 버튼에 기본적으로 체크한 애 . 
         
         self.drawType = 1                #기본값으로 직선가지라고 함. 
  
@@ -63,13 +63,14 @@ class MyApp(QWidget): #얘를 상속받은 클래스 됨, 나도 위잿이 될 �
         leftbox.addWidget(gb2) #그룹박스 2번째     #왼쪽박스를 만들고 위젯을 gb2에 실행? 
 
         grid = QGridLayout() #grid적용, 격자로 
-        gb2.setLayout(grid)   #grid 실행. ?? 
+        gb2.setLayout(grid)   #gb2를 대상으로 layout을 지정해(set은 뭔가를 지정하는 것을 말함.grid를 지정해 
+                                #gb2를 대상으로 layout을 지정하는데 격자(grid)로 지정해.
  
         gb4 = QGroupBox("FILE")   #함수로 그룹박스를 만들고 "FILE"이 나오게 한다. 
         leftbox.addWidget(gb4)    #왼쪽 박스를 만들고 위젯을 적용시킨다. gb4에 
 
         hbox4 = QHBoxLayout()     #hbox4에 수평박스를 대입한다.(적용시킨다) 
-        gb4.setLayout(hbox4)      ##gb4왜 나온거야? 
+        gb4.setLayout(hbox4)      ##gb4를 대상으로 layout을 지정하는데 hbox로 지정해. 
 
         saveBtn = QPushButton("버튼",self)    #버튼을 만들고 "버튼"이라는 글자가 나오게 한다. 그리고 self자기 자신을 받는다. 왜? 
         hbox4.addWidget(saveBtn)               #hbox4에 위젯을 적용시키고 save(Btn)을 실행? 

@@ -33,18 +33,18 @@ class MyWindow(QWidget):
         qp.drawText(100,100,"푸른하늘 은하수 하얀 쪽배 ")#좌측 상단 100,100위치에 글자를 써넣어 
         
         
-        self.drawOther(qp)  #이게 뭐였지? 
+        self.drawOther(qp)  #drawOther을 호출해 밑에 함수 
         
         qp.end() #끝을 알려줌. 중간에 그리는 것 시킴 
         #끝을 알려줌. 중간에 그리는 것 시킴 
     def drawOther(self,qp):
 
-        pen = QPen(Qt.black,3,Qt.SolidLine) #펜은 검은색, 3으로 지정하고 solidLine이 뭐였지? 
+        pen = QPen(Qt.black,3,Qt.SolidLine) #펜은 검은색, 3으로 지정하고 solidLine은 실선 
 
         qp.setPen(pen)   #펜을 설정한다. 
         qp.drawLine(50,50,100,50)     #선을 그린다 x는 50, y는 50, x2는 100, y2는 50 (직선을 그림)
 
-        pen.setStyle(Qt.DashLine) #dash그림 #큐펜을 전달해줘야 쓸 수 있어서, qp씀 
+        pen.setStyle(Qt.DashLine) #dash는 - - - -  #큐펜을 전달해줘야 쓸 수 있어서, qp씀 
         qp.setPen(pen)         #펜을 설정한다. 
         qp.drawLine(200,50,300,150)   #선을 그린다. x는 200, y는 50, x2는 300, y2는 150 
 
