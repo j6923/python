@@ -42,7 +42,7 @@ while isRunning: #반복문을 넣어야 지 보여주고 딱 끊나지 않음.
     if cnt%2 ==0:   #짝수이면 토끼1 
         screen.blit(rabbit1,(rx,ry)) #100,200 
     else:  #짝수가 아니면 토끼 2  
-        screen.blit(rabbit2,(rx,ry))
+        screen.blit(rabbit2,(rx,ry)) #토끼가 겹치지 않게 함. 
     
     
     pygame.display.update() #게임화면을 다시 그리기, 갱신함. 기본구조 

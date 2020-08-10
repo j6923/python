@@ -1,7 +1,7 @@
 import pygame  #기본구조 
 import math 
 #쓰기 전에 초기화 항상 해줘야 함
-
+import random
 pygame. init() #기본구조 
 #qoruddmadkr background music 
 
@@ -9,7 +9,7 @@ pygame. init() #기본구조
 #토끼의 정중앙좌표와 마우스 클릭 하는 자리는 피타고라스 정리 
 def pythagoras(x1,y1,x2,y2):
     return math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)) #(X2-X1)*(X2-X1) Y2-Y1제곱을 더하면 C의 제곱,, 루트 씌워주면됨 
-
+#총알 클릭할 때마다 
 
 #배경음악 
 pygame.mixer.music.load("e:/dev/python_workspace/img/sounds/backsound.mp3")
@@ -79,12 +79,24 @@ clock = pygame.time.Clock() #배경을 오-왼 토끼가 달리는 것 처럼 �
 #배경 좌표
 bg1x = 0 
 bg2x = 1200 #
+
+#홀리스트만듦
+holeList= [] #클릭할 때마다 구멍들을 하나씩 추가.
+#반동 변수 #총 쏘면 튀어올라 
+rebound = 0 
+#font 객체
+pygame.font.init() #폰트객체초기화 
+
+myFont = pygame.font.SysFont("Comic Sans MS",30) #시스템내에 설치되어있는 폰트와 사이즈  이 폰트로 
+#점수 변수 
+score = 0 #0부터 시작 
+
 while isRunning: #플레그성 반복할건지 빠져나올건지 결정하는 변수를 플래그성 변수라고 한다.isrunning이 플레그성 변수 
     cnt +=1
     bg1x-= 2 
     bg2x-= 2
-    if bg1x <= -1200: ##2식3식하면 픽셀 안 맞기도 함
-        bg1x = 1200   
+    if bg1x <= -1200: #2Tlr 3Tlrgkaus vlrtpf dks akwrleh gka
+        bg1x = 1200
         bg2x = 0
     if bg2x <= -1200:
         bg2x = 1200
@@ -94,25 +106,44 @@ while isRunning: #플레그성 반복할건지 빠져나올건지 결정하는 �
     fps = clock.tick(100) #화면에 초당 프레임수 30--괄호안 숫자  , 너무 높으면 정지되어 있는 것처럼 
     #프레임이 얼마인지 확인하려면
     # print("fps :"+str(clock.get_fps()))  #29... 초당 30정도 되는 것 
+    if rebound > 2:
+        rebound -= 2 #왜 혼자내려가?
+    
+    
     for event in pygame.event.get(): #이벤트 모으기  게임에서 다양한 이벤트가 일어나면 모음 for문이니니까 담음, 이벤트 종류 담아서 
         if event.type ==pygame.QUIT: #발생한는 이벤트 1개꺼내서 반복, 종료나오면 종료 
             isRunning = False
         if event.type == pygame.MOUSEBUTTONUP:
+            rebound = 50 #마우스 버튼 클릭하면  
             fSound.play()
             holeX,holeY = pygame.mouse.get_pos()
-        
+       
     # print(pygame.mouse.get_pressed())#마우스 뭐가 눌렸는지 안 눌렸는지 감지 
     # if event.type == pygame.KEYUP:
         
-            
+            #리스트에 있는 애들 반복문으로 한개씩그려주세요. 
             dis = pythagoras(holeX,holeY,rx+50,ry+50)
+            #holeList.append((holeX,holeY)) 에 있으면 여기저기 다 뚫림. 어디에 append되어있냐에 따라서 다름. 
             print(dis)
             #만약 dis 의 작으면 맞은것
             #크면 안 맞은것 
         #이벤트 중에 게임 종료 이밴트가 있으면 종료해. 그 다음 반복문 돌아올 때 탈출  클릭 마우스 , 이벤트 들중에 하나 꺼내서 담아서 종료하는 이벤트면 FALSE로 변경 FALSE니까 빠져나옴.
+             #추가해야 한개로 추가 가능 
             if dis <= 50:
                 print("아, 아퍼")
                 screamSound.play()
+                #holeList.append((holeX,holeY)) #토끼한테 맞을 때만 구멍꿀림 
+                holeList.append((rx+50-holeX,ry+50-holeY)) #토끼를기준으로 얼마만큼 바뀐
+                #상처가 따라갔으면 좋겠어요. 총알 화면 절대위치여서 총알 그대로 
+                #토끼의 어느위치로 저장하면 상대적위치에 구멍좌표 사용 
+        #print("홀 리스트 :", holeList) #프린트되는지 확인하느라고 넣음.  
+        #화면의 상대적 위치 --- 토끼원래 위치의 상대적위치 얼마지정해줌 
+             
+            #구멍이미지 그리기 
+            #맞으면 토끼가 램덤위치로 이동 
+                score += 100
+                rx = random.randint(1,1200) #x의 사이좌표 
+                ry = random.randint(1,700) #y의 사이좌표   #if안에 들어있어야 맞으면이 됨. 
     keys = pygame.key.get_pressed()#눌러진 애들을 통째로 갖다놓을 수 있음 
             #print("마우스 클릭됨")    
 # print(keys[pygame.K_LEFT]) #찍어 봄 
@@ -141,6 +172,11 @@ while isRunning: #플레그성 반복할건지 빠져나올건지 결정하는 �
     #press 1 stop music, press 2 play music (1번키를 누르면 음악 플레이) #picture always leftupper is 기준. 그림은 항상 왼쪽상단이 기준  
     #print(pygame.mouse.get_pos()) #마우스 좌표 찍힘   튜플로 되어 있는 것 
     snipeX, snipeY = pygame.mouse.get_pos()#마우스 움직이게 
+    #antialias <------ False
+    #화상 내의 선과 모서리를 매끄럽게 나타내는 효과 
+    txt = myFont.render("SCORE :" + str(score), False, (255,0,0))
+    screen.blit(txt,(550,50))
+    pygame.display.update() #게임화면을 다시 그리기 
     keys= pygame.key.get_pressed() #마우스 움직이게 #커서가 그점을 기준으로 좌즉 상단점 
     #좌측 상단점이 좌표값 
  
@@ -169,10 +205,13 @@ while isRunning: #플레그성 반복할건지 빠져나올건지 결정하는 �
     else:
         screen.blit(rabbit2,(rx,ry))
     #구멍이미지 그리기 
-    screen.blit(holeImg,(holeX,holeY)) #변경된 것이 그려짐 
-    screen.blit(snipe,(snipeX-50,snipeY-50)) #고정된 것이 아니어서 좌표  
+    for holeX, holeY in holeList:
+            screen.blit(holeImg,(rx+50-holeX,ry+50-holeY)) #토끼 50이어서 같은만큼 50넣어줌. 
+    #위로 올라가니까 -0이니까 큰 변화는 없어 
+    screen.blit(snipe,(snipeX-50,snipeY-50-rebound)) #고정된 것이 아니어서 좌표  
+    
 #좌표에서 빼는 방법 #그릴때 빼는 방법 커서를 이동  #높이의 절반, 너비의 절반 
-    pygame.display.update() #게임화면을 다시 그리기 
+    
 
 pygame.quit() #가장 기본구조 
 

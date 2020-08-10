@@ -9,12 +9,20 @@ screen_height = 800  #스크린의 높이를 800으로 한다.
 screen = pygame.display.set_mode((screen_width,screen_height))
 #스크린을 표시 
 bg1 = pygame.image.load("e:/dev/python_workspace/img/bac/bg1.jpg")
+bg2 = pygame.image.load("e:/dev/python_workspace/img/bac/bg2.jpg")
 screen.blit(bg1,(0,0))
+
+
+
+CoinList = []
+c = EnemyShip(random.randint(1,550),50,100,1)
+
 isRunning = True
 cnt = 0 
 px = 500
 while isRunning:
     cnt += 1
+    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             isRunning = False 

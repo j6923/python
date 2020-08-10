@@ -1,7 +1,7 @@
 import pygame  #기본구조 
 import math 
 #쓰기 전에 초기화 항상 해줘야 함
-
+import random
 pygame. init() #기본구조 
 #qoruddmadkr background music 
 
@@ -9,7 +9,7 @@ pygame. init() #기본구조
 #토끼의 정중앙좌표와 마우스 클릭 하는 자리는 피타고라스 정리 
 def pythagoras(x1,y1,x2,y2):
     return math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)) #(X2-X1)*(X2-X1) Y2-Y1제곱을 더하면 C의 제곱,, 루트 씌워주면됨 
-
+#총알 클릭할 때마다 
 
 #배경음악 
 pygame.mixer.music.load("e:/dev/python_workspace/img/sounds/backsound.mp3")
@@ -79,12 +79,16 @@ clock = pygame.time.Clock() #배경을 오-왼 토끼가 달리는 것 처럼 �
 #배경 좌표
 bg1x = 0 
 bg2x = 1200 #
+
+#홀리스트만듦
+holeList= [] #클릭할 때마다 구멍들을 하나씩 추가.
+
 while isRunning: #플레그성 반복할건지 빠져나올건지 결정하는 변수를 플래그성 변수라고 한다.isrunning이 플레그성 변수 
     cnt +=1
     bg1x-= 2 
     bg2x-= 2
-    if bg1x <= -1200: ##2식3식하면 픽셀 안 맞기도 함
-        bg1x = 1200   
+    if bg1x <= -1200: #2Tlr 3Tlrgkaus vlrtpf dks akwrleh gka
+        bg1x = 1200
         bg2x = 0
     if bg2x <= -1200:
         bg2x = 1200
@@ -100,19 +104,33 @@ while isRunning: #플레그성 반복할건지 빠져나올건지 결정하는 �
         if event.type == pygame.MOUSEBUTTONUP:
             fSound.play()
             holeX,holeY = pygame.mouse.get_pos()
-        
+       
     # print(pygame.mouse.get_pressed())#마우스 뭐가 눌렸는지 안 눌렸는지 감지 
     # if event.type == pygame.KEYUP:
         
-            
+            #리스트에 있는 애들 반복문으로 한개씩그려주세요. 
             dis = pythagoras(holeX,holeY,rx+50,ry+50)
+            #holeList.append((holeX,holeY)) 에 있으면 여기저기 다 뚫림. 어디에 append되어있냐에 따라서 다름. 
             print(dis)
             #만약 dis 의 작으면 맞은것
             #크면 안 맞은것 
         #이벤트 중에 게임 종료 이밴트가 있으면 종료해. 그 다음 반복문 돌아올 때 탈출  클릭 마우스 , 이벤트 들중에 하나 꺼내서 담아서 종료하는 이벤트면 FALSE로 변경 FALSE니까 빠져나옴.
+             #추가해야 한개로 추가 가능 
             if dis <= 50:
                 print("아, 아퍼")
                 screamSound.play()
+                #holeList.append((holeX,holeY)) #토끼한테 맞을 때만 구멍꿀림 
+                holeList.append((rx+50-holeX,ry+50-holeY)) #토끼를기준으로 얼마만큼 바뀐
+                #상처가 따라갔으면 좋겠어요. 총알 화면 절대위치여서 총알 그대로 
+                #토끼의 어느위치로 저장하면 상대적위치에 구멍좌표 사용 
+        #print("홀 리스트 :", holeList) #프린트되는지 확인하느라고 넣음.  
+        #화면의 상대적 위치 --- 토끼원래 위치의 상대적위치 얼마지정해줌 
+             
+            #구멍이미지 그리기 
+            #맞으면 토끼가 램덤위치로 이동 
+        
+                rx = random.randint(1,1200) #x의 사이좌표 
+                ry = random.randint(1,700) #y의 사이좌표   #if안에 들어있어야 맞으면이 됨. 
     keys = pygame.key.get_pressed()#눌러진 애들을 통째로 갖다놓을 수 있음 
             #print("마우스 클릭됨")    
 # print(keys[pygame.K_LEFT]) #찍어 봄 
@@ -169,8 +187,11 @@ while isRunning: #플레그성 반복할건지 빠져나올건지 결정하는 �
     else:
         screen.blit(rabbit2,(rx,ry))
     #구멍이미지 그리기 
-    screen.blit(holeImg,(holeX,holeY)) #변경된 것이 그려짐 
+    for holeX, holeY in holeList:
+            screen.blit(holeImg,(rx+50-holeX,ry+50-holeY)) #토끼 50이어서 같은만큼 50넣어줌. 
+    
     screen.blit(snipe,(snipeX-50,snipeY-50)) #고정된 것이 아니어서 좌표  
+    
 #좌표에서 빼는 방법 #그릴때 빼는 방법 커서를 이동  #높이의 절반, 너비의 절반 
     pygame.display.update() #게임화면을 다시 그리기 
 

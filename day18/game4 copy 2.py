@@ -60,7 +60,7 @@ while isRunning: #플레그성 반복할건지 빠져나올건지 결정하는 �
         if event.type ==pygame.QUIT: #발생한는 이벤트 1개꺼내서 반복, 종료나오면 종료 
             isRunning = False
     # if event.type == pygame.KEYUP:
-        
+    keys = pygame.key.get_pressed()
         #이벤트 중에 게임 종료 이밴트가 있으면 종료해. 그 다음 반복문 돌아올 때 탈출  클릭 마우스 , 이벤트 들중에 하나 꺼내서 담아서 종료하는 이벤트면 FALSE로 변경 FALSE니까 빠져나옴.
 # print(keys[pygame.K_LEFT]) #
     if keys[pygame.K_LEFT] == 1: #왼쪽 화살표 버튼이 눌린상태라면 
