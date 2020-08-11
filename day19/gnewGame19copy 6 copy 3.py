@@ -103,7 +103,7 @@ class EnemyShip:
 def collision():       #collsion 
     global ey #지역변수라고 생각해서 글로벌 변수로 함. 
     for m in mList:
-        dis = pythagoras(ex,ey,m.x,m.y)
+        dis = pythagoras(ex,ey,m.x,m.y) #적 비행기의 x와 적 비행기 y 
         if dis< 30:
             print("아야~~~")
             print(dis)        #미사일 한발 만 쏴서 테스트 
