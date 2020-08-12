@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{font: size 20px;}
+        /* id가 blue인 대상만 */
+        #blue{
+            color:blue;
+        }
+        #purple {
+            color:purple;
+        }
+        .cred{
+            color:red;
+        }
+        
+        /* 비슷한 이름있으면 ol#으로 구체적으로 지정하는게 나음 */
+        /* '.클래스명'으로 써야함, 그래서 .cred라고 함.  ,,, 동시에 여러개할 때는  ;*/
+    </style>
+    <!-- id가 #인애만 -->
+    <!-- sytle type="text/css" 문서 css형식이야. html5에서 무조건 css가 되기 때문에 style만 써도 css임-->
+</head>
+
+<body>
+    <h1>타입 선택지</h1>
+    <!-- p 태그의 글자를 20px로 변경 -->
+    <!-- p{HTML의 모든 요소는 선택지로 사용가능}*4-->
+        <p id="blue">HTML의 모든 요소는 선택지로 사용가능</p> 
+        <!-- 이 문단만 글자색을 파랑색으로 ...특징을 잡으려면범위 줄임 -->
+        <p class="cred" >HTML의 모든 요소는 선택지로 사용가능</p>
+        <!-- 글자색을 보라색으로 변경 -->
+        <p id='purple'>HTML의 모든 요소는 선택지로 사용가능</p>
+        <p class="cred">HTML의 모든 요소는 선택지로 사용가능</p>
+
+<!-- id는 값이 유니크한 애, 중복된 값은 없을 것이라고 만들어진 애.... 같은 애 있으면 안됨, class는 값이 같은 것이 있을 수 있음 -->
+
+    <style>
+        *{padding:0;
+        margin:0;}
+        /* 원래 동시에 두개 이상 안 쓰는 것이 원칙 세미콜론 단위로 끊어서 쓰기  *모든 태그에 속성을 적용 */
+        #bigSize{font-size: 20px;}
+        #blueOne{color:blue;}
+        .red{color:red}
+        #PinkOne{color:pink}
+        
+        ol#nav{
+            list-style-type: lower-greek;
+        }
+    </style>
+<!-- id가 bigSize인 요소의 글자폰트를 20px
+class 가 red 요소의 글자색을 red
+id가 PinkOne인요소의 배경색을 핑크로 변경 -->
+    
+
+<body>
+    <ol id="nav"><li id="bigSize" class="red">1{다양한 요소를 선택자로 사용할수 있다</li>
+        <li id= "blueOne">2{다양한 요소를 선택자로 사용할수 있다</li>
+        <li class="red">3{다양한 요소를 선택자로 사용할수 있다</li>
+        <li id="PinkOne">4{다양한 요소를 선택자로 사용할수 있다</li>
+    </ol>
+</body>
+</html>
+
+<!-- 클래스랑 id로 어떤 선택자로 할 건지 잘 판단하기  -->

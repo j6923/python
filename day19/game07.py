@@ -1,7 +1,7 @@
 import pygame                       #pygame 모듈을 가져온다. 
 import math
 
-pygame.init()
+pygame.init()  #pygame을 초기화한다.  #함수로 만들어 놓고 self init 
 
 # 토끼의 중심좌표와 마우스 클릭 위치의 거리를 구하기 
 

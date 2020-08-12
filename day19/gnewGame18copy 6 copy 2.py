@@ -39,7 +39,7 @@ enemyship2 = pygame.image.load("e:/dev/python_workspace/img/img2/gunship2.png")
 enemyship3 = pygame.image.load("e:/dev/python_workspace/img/img2/gunship3.png")
 
 #크기 조정 
-player1 = pygame.transform.scale(player1,(50,50))
+player1 = pygame.transform.scale(player1,(50,50)) #크기 튜플로 받음.
 player2 = pygame.transform.scale(player2,(50,50))
 player3 = pygame.transform.scale(player3,(50,50))
 player4 = pygame.transform.scale(player4,(50,50))

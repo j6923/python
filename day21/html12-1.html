@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+    *{padding:0;
+    margin:0;}
+    /* 원래 동시에 두개 이상 안 쓰는 것이 원칙 세미콜론 단위로 끊어서 쓰기  *모든 태그에 속성을 적용 */
+    #bigSize{font-size : 20px;}
+    #blueOne{color:blue;}
+    .red{color:red}
+    #pinkOne{color:pink}
+    
+    ol#nav{
+        list-style-type:lower-greek;
+    }
+</style>
+<!-- id가 bigSize인 요소의 글자폰트를 20px
+class 가 red 요소의 글자색을 red
+id가 PinkOne인요소의 배경색을 핑크로 변경 -->
+</head>
+
+<body>
+    <ol id="nav">
+        <li id="bigSize" class="red">다양한 요소를 선택자로 사용할수 있다</li>
+        <li id= "blueOne">다양한 요소를 선택자로 사용할수 있다</li>
+        <li class="red">다양한 요소를 선택자로 사용할수 있다</li>
+        <li id="PinkOne">다양한 요소를 선택자로 사용할수 있다</li>
+    </ol>
+</body>
+</html>
+
+<!-- 클래스랑 id로 어떤 선택자로 할 건지 잘 판단하기  -->
