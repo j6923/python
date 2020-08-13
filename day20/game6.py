@@ -1,5 +1,5 @@
-import pygame
-import random
+import pygame  #pygame을 불러옴. 
+import random  #random을 불러옴 
 pygame.init() #int해야 초기화 
 
 screen_width = 1200

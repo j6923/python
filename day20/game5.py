@@ -1,11 +1,11 @@
-import pygame
-import random
-pygame.init() #int해야 초기화 
+import pygame #pygame을 불러온다. 
+import random #random을 불러온다. 
+pygame.init() #int해야 초기화  
 
-screen_width = 1200
-screen_height = 800
+screen_width = 1200   #1200을 screen_width에 넣는다. 스크린의 너비값(x값)
+screen_height = 800   #800을 screen_height에 넣는다. 스크린의 높이값(y값) 
 #배경 이미지 객체 
-bg = pygame.image.load("e:/dev/python_workspace/img/img/bg.jpg")
+bg = pygame.image.load("e:/dev/python_workspace/img/img/bg.jpg")  #
 bg = pygame.transform.scale(bg,(1200,800))
 
 ball = pygame.image.load("e:/dev/python_workspace/img/img2/gold.png")

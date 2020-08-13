@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 각 div 영역의 너비를 230px, 높이를 250배경은 오렌지색  */
+        div{
+            width:230px;
+            height: 250px;
+            background-color: orange;
+        }
+        #div1{
+            border : 1px solid black; 
+            padding :20px
+            margin : 10px
+        }
+        #div2 {
+            border :2px dotted blue;
+            padding: 20px  
+            /* margin : 10px 20px 30px 40px; */
+            /* margin-left:30px */
+            margin : 0px auto
+            /* 상하 좌우  상하는 0 좌우는 auto 화면 전체 사이즈 정중앙에 지정해줌*/
+        }
+        /* 12시 방향부터 시계방향으로 지정 top right button left */
+        /* 그중 한가지 margin_left 30 */
+        /* div1 테두리 1px 실선 검정색 */
+        /* div2 영역의 테두리 2px 점선 (dotted) 파란색 마진 30 패딩 15 */
+        /* margin네군데 다 다르게 줄 수 있음  */
+    </style>
+</head>
+<body>
+    <div id = "div1"> 
+    ID: <input type="text" name="id" id=""><br>
+    PW: <input type="text" name="pw" id="">
+    </div>
+    <div id = "div2">
+        box2
+    <!-- div#div2{BOX2} -->
+    
+</body>
+</html>
+
+<!-- css에 적용된 것  -->
+<!-- f12  -->
+<!-- checkbox 각요소 있다면 어떻게 없다면 어떻게  -->
+
+<!-- 개발자 도구에서 테스트하고 지금 설정한 것 넣으면 됨, element,style -->
+<!-- 인터넷에서 테스트하는 것이 가장 정확함.  -->
+<!-- css는 기본적 박스 모델을 씁니다.  -->
+<!-- 너비높이 알 수 있음  -->
+<!-- 테두리border와 내용(contexts) 사이를 padding이라고 부름  -->
+<!-- 테두리 바깥쪽 영역을 margin이라고 함 -->
+<!-- margin으로 움직이는 효과 볼 수 있음  -->
