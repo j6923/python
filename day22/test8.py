@@ -1,14 +1,14 @@
 #현재 상영영화의 포스터를 얻고 싶어요 
 #현재 상영작의 번호를 안다 개발자 도구 
-from bs4 import BeautifulSoup as bs
-from pprint import pprint
-import requests
-from pathlib import Path
+from bs4 import BeautifulSoup as bs  #bs4에서 Beautifulsoup을 불러온다. 
+from pprint import pprint #pprint에서 pprint를 불러온다. 
+import requests  #requests를 불러온다. 
+from pathlib import Path #pathlib에서 path를 불러온다. 
 url = "https://movie.naver.com/movie/running/current.nhn" #url의 주소를 입력한다. 
 
-res = requests.get(url)   #url을 요청한다. 
+res = requests.get(url)   #url을 요청한다.  requesets함수에서 get방식으로 url을 얻는다. 
 
-res.raise_for_status()   
+res.raise_for_status()    #
 
 # pprint(res.text)
 
@@ -37,17 +37,17 @@ for div in divs:   #FOR문으로 돌려 반복문으로 가져옴.
   
     #요청
 #request가 get으로 해서 결과를 가져옵니다, 주소를 주면 결과를 반환해줄거야 함수 만들어놓음 설명 reqests.get(url) 
-    res2 = requests.get(url2)
+    res2 = requests.get(url2)            #requests로 get형식으로 ur12를 가져오고 res2에 대입
     #pprint(res2)
     #저장하기 
-    soup2 = bs(res2.text,'lxml')
+    soup2 = bs(res2.text,'lxml')     
     img = soup2.find("img")
     #img인 큰 사진 가져온다. 
     print(img['src'])
     #이미지 파일 저장하기 
-    imgpath = img['src']
-    res3 = requests.get(imgpath)
-    Path("./img/movie_poster").mkdir(parents = True, exist_ok=True)
+    imgpath = img['src'] 
+    res3 = requests.get(imgpath) #requests를 사용해서 impath를 얻어오고 res3에 대입. 
+    Path("./img/movie_poster").mkdir(parents = True, exist_ok=True)  #makedictionary를 해서 
     idx +=1 #안 하면 덧붙입 
     with open("./img/movie_poster/movie{}.jpg".format(idx),'wb') as f: #파일 1234 만듦 i씩 증가할 때마다 증가 ,, 
         f.write(res3.content)

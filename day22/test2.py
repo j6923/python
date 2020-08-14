@@ -12,7 +12,7 @@ url = "https://comic.naver.com/webtoon/list.nhn?titleId=20853"
 res = requests.get(url) #응답 가져옴 
 #아 주소로 get방식으로 url요청합니다. 
 
-#200정상죈 
+#200정상값 
 
 
 # print(res)
@@ -48,16 +48,16 @@ print(soup.a.attrs) #a앨리먼트의 속성들을 볼 수 있음
 # PS E:\dev\python_workspace> 
 # 하이퍼래퍼런스 속성만 갖고 오고 싶어요
 print("---------------------------------------------------")
-print(soup.a.attrs['href']) #soup을 이용 
+print(soup.a.attrs['href']) #soup을 이용 해서 a 앨리먼드의 속성이 href인 것을 출력해라. 
 
 # 함수를 이용한 접근(도 가능)
-print(soup.find("td",attrs={"class","title"})) #찍어본 것  
+print(soup.find("td",attrs={"class","title"})) #찍어본 것  #변수 soup에서 td
 #분석한 페이지 뷰티플 숲 객체 에서 찾아라 td라는 태그 중에서 속성 attrs 클래스인 애로 그 값이 title 
 #속성이 타이틀인 애를 찾아줘 
 #클래스가 타이틀인 애만 얻고 싶습니다. 
 #td에서 클래스가 타이들인 애만 얻고 싶어/ 
 print("------------------------------------------------------------")
-title1=soup.find("td",attrs={"class","title"})
+title1=soup.find("td",attrs={"class","title"}) #soup 객체에서 클래스 타이틀인 속성인 td 엘리먼트 객체를 찾아와 
 
 a = title1.find("a") #거기에서 다시 a태그를 찾아와 #위의 속성은 항상 줘야하는 것이 아니라 주면 구체적인 것 
 #안 줘도 됨 

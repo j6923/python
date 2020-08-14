@@ -28,11 +28,11 @@ for i in range(1230,1237):
     #path와 변수 headers의 headers
 
 
-    data = soup.find('div',attrs={"class", "wt_viewer"})
+    data = soup.find('div',attrs={"class", "wt_viewer"}) #soup에서 find해라 div
     #print(data)
 
     images = data.findAll("img") #img 몽땅 가져와요 
-    pprint(images) #묶음 단위로 리절트 set으로 되어 있ㄴ음 
+    pprint(images) #묶음 단위로 리절트 set으로 되어 있음 
 
     for img in images:
         pprint(img['src']) #각각 떨어져 나오는 것을 볼 수 있음  그리고 src하면 이미지 경로만 가져올 수 있음. 

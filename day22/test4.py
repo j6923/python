@@ -9,7 +9,7 @@ url = "https://comic.naver.com/webtoon/list.nhn?titleId=20853"
 #요청하는 것을 reque get 가져오는 것. get 주소창에서 가져오는 것 
 
 
-res = requests.get(url) #응답 가져옴 
+res = requests.get(url) #응답 가져옴   requests에서 url을 
 #아 주소로 get방식으로 url요청합니다. 
 
 #200정상죈 

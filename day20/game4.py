@@ -35,7 +35,7 @@ while True: #이거해야 꺼지지 않음
 
     fps = clock.tick(30)#화면의 초당 프레임수 
 
-    inc_x,inc_y = changeDirection(bx,by,inc_x,inc_y)
+    inc_x,inc_y = changeDirection(bx,by,inc_x,inc_y) #changeDirection
   #inc_x, inc_y 로 해서 닿으면
     for event in pygame.event.get(): #이벤트 가져옴 
         if event.type == pygame.QUIT: #이벤트가 종류이벤트이면 빠져나감
