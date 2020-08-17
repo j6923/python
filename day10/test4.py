@@ -38,14 +38,14 @@ d.status()  #d의 status 호출
 #         print("깜박깜박") #함수가 호출되면 깜박깜박출력
 #     def fast(self): #동작을 fast라는 함수로 만듦.
 #         print("가속") #함수가 호출되면 가속 출력
-#     def slow(self): #동작 
-#         print("감속") #함수가 호출되면 
-#     def stop(self):
-#         print("정지")
+#     def slow(self): #동작 slow를 함수로 만듦
+#         print("감속") #함수가 호출되면 감속 출력
+#     def stop(self): 동작 stop을 함수로 민듦
+#         print("정지") #함수가 호출되면 정지 출력
 
-# s = car()
-# print(s.name)
-# print(s.company)
+# s = car() #c인스턴스를 만듦
+# print(s.name) #s의 이름을 출력
+# print(s.company) 
 # print(s.color)
 # print(s.year)
 # print(s.wheel)
