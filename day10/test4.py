@@ -17,14 +17,14 @@ P = Human("팽수", 20, "직장인")
 P. status()
 
 print("--------------------------------------------------")
-d = Human("둘리", 100000000, "백수")
-d.status()
+d = Human("둘리", 100000000, "백수")  #Human에 매게변수 둘리 100000000 백수를 매게변수로 주고 d에 대입
+d.status()  #d의 status 호출
 
 
-# class car:
-#     def __init__(self):
-#         print("초기화함수")
-#         self.company = '현대'
+# class car: #car 라는 클래스를 만듦
+#     def __init__(self):  #초기화함
+#         print("초기화함수") #초기화함수를 호출
+#         self.company = '현대' #class car의 company석성을 현대로 함
 #         self.name = 'Sonata'
 #         self.color = 'red'
 #         self.year = '1년'
