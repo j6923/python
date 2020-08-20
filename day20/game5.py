@@ -5,23 +5,23 @@ pygame.init() #int해야 초기화
 screen_width = 1200   #1200을 screen_width에 넣는다. 스크린의 너비값(x값)
 screen_height = 800   #800을 screen_height에 넣는다. 스크린의 높이값(y값) 
 #배경 이미지 객체 
-bg = pygame.image.load("e:/dev/python_workspace/img/img/bg.jpg")  #
-bg = pygame.transform.scale(bg,(1200,800))
+bg = pygame.image.load("e:/dev/python_workspace/img/img/bg.jpg")  #pygame으로 image를 e:/dev/python_workspace/img/img/bg.jpg에서 load하고 bg에 대입  
+bg = pygame.transform.scale(bg,(1200,800)) #pygame으로 크기를 옮기는데 bg의 x측을 1200으로 하고 y측을 800으로 한다. 
 
-ball = pygame.image.load("e:/dev/python_workspace/img/img2/gold.png")
-ball = pygame.transform.scale(ball,(100,100))
-screen = pygame.display.set_mode((screen_width,screen_height))
+ball = pygame.image.load("e:/dev/python_workspace/img/img2/gold.png")  #pygame으로 이미지를 업로드하는데 e:/dev/python_workspace/img/img2/gold.png에서 하고 그리고 ball에 대입해라.  
+ball = pygame.transform.scale(ball,(100,100)) #pygame을 대상으로 크기를 조정하는데 ball을 x측 100으로 하고 y측 100으로 해라.그리고 ball에 대입  
+screen = pygame.display.set_mode((screen_width,screen_height)) #pygame을 대상으로 x측을 screen_width로 y측을 screen_height로 mode를 지정해서 나타내라(display)
 
 
-bx = 600  #공이 튕기면서 이동해야 해서 
-by = 400 #좌표줌. 
-inc_x = random.randint(-10,10) #속도줄려면 
-inc_y = random.randint(-10,10)
-pygame.display.set_caption("핑퐁")
+bx = 600  #공이 튕기면서 이동해야 해서 #ball의 x좌표를 600으로 함. 600을 bx에 대입 
+by = 400 #좌표줌.    #400을 by에 대입   #ball의 y좌표를 400으로 함. 400을 by에 대입 
+inc_x = random.randint(-10,10) #속도줄려면         #increase x를 나타내는 inc_x에 -10에서 10사이의 수에서 램덤하게 수를 뽑아냄. 
+inc_y = random.randint(-10,10)                    #increase y를 나타내는 inc_y에 -10에서 10사이의 수에서 램덤하게 수를 뽑아냄. 
+pygame.display.set_caption("핑퐁")                #pygame으로 창의 틀을 핑퐁으로 나타내라. 
 #시계변수
-clock = pygame.time.Clock()
-isRunning = True #반복함 
-def changeDirection(x,y,ix,iy): #ix는 inc_x
+clock = pygame.time.Clock()                       #pygame으로   #얘가 뭐였지? 
+isRunning = True #반복함                           #true를 isRunning에 대입. 
+def changeDirection(x,y,ix,iy): #ix는 inc_x        #changeDirection이라는 함수를 
     #화면 위쪽 벽에 맞으면 튕겨나가게 설정 
     #y가 0에 닿으면 
     if y <= 3 or y>=780: #0이면 너무 붙어있는 것 같으니까  #한번에 쓸수 있음 

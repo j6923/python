@@ -27,7 +27,7 @@ import requests#서버 요청보님, 그 요청 처리하는 묘듈
 #pip install requests 
 
 res = requests.get("http://google.com") #네이버 페이지 가서 페이지를 얻어 
-print("응답코드:",res.status_code) #메인 서버 나에게 주고 
+print("응답코드:",res.status_code) #메인 서버 나에게 주고   #코드가 정상적인 코드 200인지 봄 
 
 
 #404는 뭔가 이상한 상태 
@@ -41,9 +41,9 @@ print("응답코드:",res.status_code) #메인 서버 나에게 주고
 #500 : 서버 사이드 로직 에러 
 #일반적 개발자가 무엇을 하거나 심각한 문제가 생겼을 때
 # 
-if res.status_code == requests.codes.ok: #200:뭔지 모를 수 있어 
+if res.status_code == requests.codes.ok: #200:뭔지 모를 수 있어 requests.codes.ok라고 씀  #만약 res를 대상으로 코드가 requesets로 한 codes가 ok 즉 200이면 
     #requests.code가 200이란 소리, 상수로 만들어놓음  
-    print("OKOKOK")
+    print("OKOKOK")  #OKOKOK를 출력 
     #print(len(res.text))#응답받아온 것에 글자가 뭔지 찍어보기 
 
     #몇자인지 알고 싶어요 

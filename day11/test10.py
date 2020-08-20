@@ -1,4 +1,4 @@
-from test9 import animal 
+from test9 import Animal                                                              #
 class Animal:
     def __init__(self,foots):
         self.eyes = 2
@@ -28,4 +28,5 @@ class Rabbit:
     def sleeping(self):
         print("쿨쿨 자요")
 
-    print(r.eyes)
+r = Rabbit() 
+print(r.eyes)

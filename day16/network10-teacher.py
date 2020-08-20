@@ -2,7 +2,7 @@
 import socket
 import threading
 
-ip = "192.168.0.68"
+ip = "192.168.0.31"
 port = 5000
 # 닉네임 결정
 nickname = input("당신의 닉네임을 입력하세요 : ")

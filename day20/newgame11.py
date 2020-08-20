@@ -1,9 +1,9 @@
 #이번에는 종게임 
 
 #게임의 기본 틀 
-import pygame
-import math 
-import random
+import pygame   #pygame을 불러옴. (게임을 만들어주는 모듈)
+import math    #math를 불러옴.(여러가지 수학과 관련된 함수가 들어있음)
+import random   #
 import os #운영체제와 관련된 모든 모듈 
 #초기화 하기전 초기화 해줘야함. 
 os.environ['SDL_VIDEO_WINDOW_POS']="50,50"

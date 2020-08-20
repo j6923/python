@@ -1,25 +1,25 @@
 # 외부의 데이터 가져올 거예요. 
-import requests 
-from bs4 import BeautifulSoup as bs  #여기 패기지로 부터 패키지 가져오고 별칭 줌 
+import requests  #requests를 불러옴 
+from bs4 import BeautifulSoup as bs  #여기 패기지로 부터 패키지 가져오고 별칭 줌 bs로 
 from pprint import pprint #보기좋게 출력하고 싶어요. 
 #원본 문서자체는 \t 있었는데 브라우저는 \t 무시함.
 
-url = "https://comic.naver.com/webtoon/list.nhn?titleId=20853"
+url = "https://comic.naver.com/webtoon/list.nhn?titleId=20853"   #주소를 가져옴. https://comic.naver.com/webtoon/list.nhn?titleId=20853을 url에 대입  
 
 #요청하는 것을 reque get 가져오는 것. get 주소창에서 가져오는 것 
 
 
-res = requests.get(url) #응답 가져옴 
+res = requests.get(url) #응답 가져옴   #requests로 url을 가져옴. 
 #아 주소로 get방식으로 url요청합니다. 
 
 #200정상값 
 
 
-# print(res)
+# print(res)  #res를 출력함. 
 # #상태 코드 번호 가지고 있음 
 
 # print(res.status_code) #res의 status-code를 불러와 
-# print(res.text)  
+# print(res.text)     #이게 뭐였지? 
 
 #데이터 보기 좋게 가져오려면
 

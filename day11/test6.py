@@ -1,4 +1,4 @@
-class Whale:
+class Whale:                                                             #클래스 Whale을 생성 
     def __init__(self):
         self.eyes = 2
         self.mouth = 1

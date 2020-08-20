@@ -8,7 +8,7 @@ url = "https://movie.naver.com/movie/running/current.nhn" #url의 주소를 입�
 
 res = requests.get(url)   #url을 요청한다.  requesets함수에서 get방식으로 url을 얻는다. 
 
-res.raise_for_status()    #
+res.raise_for_status()    #res을 대상으로 
 
 # pprint(res.text)
 

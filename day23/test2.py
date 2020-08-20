@@ -17,8 +17,8 @@
 
 from selenium import webdriver  #함수를 불러옴 
 
-from selenium.webdriver.common.keys import Keys
-import time 
+from selenium.webdriver.common.keys import Keys   #selenium.webdriver.common.keys에서 keys를 불러옴. 
+import time  #time을 불러옴. 
 
 #크롬 드라이버 객체를 생성 
 browser = webdriver.Chrome("e:/dev/chromedriver.exe")  #실행할 작업이 여기에 있어서 따로 ("c:..~~..?") 경로지정해줘야함.  #webdriver을 chrome으로 생성하고 browser에 대입, 그래서 browser이라는 객체 생성 
@@ -31,8 +31,7 @@ browser.get("http:www.naver.com")  #웹 브라우저 강제로 뜨게 함.
 
 #검색창 엘리먼트 객체 
 #이 브라우저에게 앨리번트 찾을 건데 앨리먼트 이름이 아이디가 쿼리 이 앨리먼트 객체 가져옴
-element = browser.find_element_by_id("query") #브라우저에서 앨리먼트를 찾을 건데 id(이름)이 query인 것을 찾아서 element에 대입.
-time.sleep(3) 
+element = browser.find_element_by_id("query") #브라우저에서 앨리먼트를 찾을 건데 id(이름)이 query인 것을 찾아서 element에 대입. 
 element.click() #창을 띄우면서 클릭함 #앨리먼트를 클릭해줘. 클릭이라는 함수 호출 
 
 #글자를 쓰려면  
@@ -50,8 +49,8 @@ element.send_keys(Keys.ENTER) #엔터 티값 key.enter  #브라우저 페이지 
 
 
 #3초 후에 구글로 이동 
-time.sleep(3)
-browser.get("http://www.google.com")
+time.sleep(3) #3초 잠을 자라 
+browser.get("http://www.google.com") #브라우저를 대상으로 http://www.google.com를 얻음(뜨게함) 
 
 
 
@@ -60,15 +59,15 @@ element = browser.find_element_by_name("q") #엘리먼트로 찾아, name tag이
 #엘리먼트를 클릭 
 element.click()
 #검색키워드를 입력 
-element.send_Keys("광복절")
-element.send_Keys(Keys.ENTER) #엔터 
+element.send_Keys("광복절")  #element에 "광복절"이라는 키를 보냄 
+element.send_Keys(Keys.ENTER) #엔터   #엔터를 치게 함. 
 time.sleep(3) #3초 기다림 
-element.send_Keys(Keys.BACKSPACE)
-element.send_Keys(Keys.BACKSPACE)
-element.send_Keys(Keys.BACKSPACE)
-element.send_keys("독립기념일 ㅠ.ㅠ") 
-element.send_Keys("휴일")
-element.send_Keys(Keys.ENTER)
+element.send_Keys(Keys.BACKSPACE)  #backspace하게 함.   element를 대상으로 keys.backspace로 backspace하게  키로 보냄 
+element.send_Keys(Keys.BACKSPACE)  #backspace하게 함. element를 대상으로 keys.backspace로 backspace하게  키로 보냄
+element.send_Keys(Keys.BACKSPACE)  #backspace하게 함. element를 대상으로 keys.backspace로 backspace하게  키로 보냄
+element.send_keys("독립기념일 ㅠ.ㅠ")   #element에 독립기념일 ㅠ.ㅠ로 키를 보내서 쓰게 함. 
+element.send_Keys("휴일") #element에 휴일을 키를 보내서 쓰게 함. 
+element.send_Keys(Keys.ENTER) #element를 대상으로 enter을 치게 하는 keys.enter을 치게 함.   
 
 
 

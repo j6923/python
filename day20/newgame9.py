@@ -17,8 +17,10 @@ def makeEnemy(): #makeEnemy라는 함수를 만든다.
     #적의 비행기를 만든 함수 EnemyShip
     
     #음수줘서 밖에서 나오는 듯한 효과를 냄. 
-    enemyList.append(e) 
+    enemyList.append(e) # 적 비행기가 여러개 생성되게 함. 
 isGameOver = False  #변수를 선언하여 false가 되게 함. 
+
+
 #캐릭터 우주선과 적 우주선 간의 충돌 체크를 위한 함수 
 def checkCollision(px,py):
     global isGameOver
@@ -27,7 +29,7 @@ def checkCollision(px,py):
         dis = pythagoras(e.x, e.y,px,py) #거리 = 피타고라스와 비행기 거리 캐릭터의 px,py 
         print(dis)
         if dis <= 45:
-        #print("dkdi~~~~~")
+        #print("아야~~~~~")
             isGameOver = True #게임이 종료된 상태를 만듬 
 
 def collision(x1,y1, x2,y2):       
@@ -44,7 +46,7 @@ screen_height = 900 #높이 900을 screen_height에 대입.
 screen = pygame.display.set_mode((screen_width,screen_height)) #기본으로 설정 
 #pygame에 display를 해서 set_mode를 해서 
 isRunning = True   
-pygame. display. set_caption("우주 전쟁")
+pygame. display. set_caption("우주 전쟁") #
 
 #배경 이미지 객체(1)
 bg1 = pygame.image.load("e:/dev/python_workspace/img/img2/space.jpg")

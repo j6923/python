@@ -41,4 +41,4 @@ while True: #이거해야 꺼지지 않음
 
 
 
-pygame.quit()
+pygame.quit() #pygame을 끝낸다. 

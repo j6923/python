@@ -28,9 +28,9 @@ class MyApp(QWidget):
 
     def goDown(self):
     #self.label1.move(self.label1.x(),self.label1.y()-10) 이렇게 쓸 수도 있ㅇ,ㅁ. 
-       x = self.label1.x()
-       y = self.label1.y()+50
-       self.label1.move(x,y)  
+        x = self.label1.x()
+        y = self.label1.y()+50
+        self.label1.move(x,y)  
 
     def initUI(self):
         #QPixmap 객체 
@@ -41,7 +41,7 @@ class MyApp(QWidget):
         self.label1.setPixmap(p_img)
         self.label1.move(100,250)
         font1 = self.label1.font()
-     #안에 있으면지역변수 되니까 
+    #안에 있으면지역변수 되니까 
 
         self.label1.move(100, 250)
         font1 = self.label1.font()

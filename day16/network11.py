@@ -54,7 +54,7 @@ def handle(client):
 def reveive():
     while True:
         print("클라이언트 연결 대기중")
-        connectionSock,addr=server.acceept() #연결되면 소켓과ip정보 줌
+        connectionSock,addr=server.accept() #연결되면 소켓과ip정보 줌
         print(str(addr)+"로부터 연결됨")
 
     #별명을 요청하고 저장
@@ -76,7 +76,7 @@ def reveive():
     t = threading.Thread(target=handle,args=(connectionSock,))
     t.start()
 
-receive() 
+reveive() 
 
 #append 시키다보니까 사용자는 나갔는데 계속 보내려고 시도해서 에러뜸 
 #사용자가 나가면 

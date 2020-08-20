@@ -1,13 +1,13 @@
 
-#자동화 
-from selenium import webdriver
+#자동화 하기 
+from selenium import webdriver #selenium에서 함수 webdriver를 불러온다. 
 
-from selenium.webdriver.common.keys import Keys
-import time 
+from selenium.webdriver.common.keys import Keys  #selenium.webdriver.common.keys에서 keys함수를 불러옴. 
+import time  #time을 불러옴. 
 
 #코레일 열차표 예매 
 
-browser = webdriver.Chrome("e:/dev/chromedriver.exe")
+browser = webdriver.Chrome("e:/dev/chromedriver.exe") # webdriver로 chrome으로  
 
 print(browser) #browser 띄워지는 지 띄워봄 
 

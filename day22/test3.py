@@ -23,7 +23,7 @@ res = requests.get(url) #응답 가져옴
 
 #데이터 보기 좋게 가져오려면
 
-res.raise_for_status()
+res.raise_for_status()  #
 # 별도의 라이브러리 있으면 편함 
 res.close() #하면 자원반납해야함. 안 그러면 계속 놀고 있음. 
 #pip install bs4 설치 

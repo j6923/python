@@ -15,7 +15,7 @@ res = requests.get(url) #응답 가져옴   requests에서 url을
 #200정상죈 
 
 
-# print(res)
+# print(res) 
 # #상태 코드 번호 가지고 있음 
 
 # print(res.status_code) #res의 status-code를 불러와 
@@ -45,7 +45,7 @@ print(a.get_text()) #get text로 갖고 오면 됨
 
 #제목 전부를 얻고 
 #이런 애들 다 찾아줘. 
-tdList = soup.find_all("td", attrs={"class","title"})  #class와 title이 있는 것을 다 찾아줘 
+tdList = soup.find_all("td", attrs={"class","title"})  #class와 title이 있는 것을 다 찾아줘  #classfh title있는 것 다 찾아주고 tdList에 대입 
 #.get써도 되지만 ()해도 됨. 
 print(tdList,type(tdList))
 print("--------------------------------------------------")

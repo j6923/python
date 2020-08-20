@@ -5,7 +5,7 @@
 import socket
 import threading
 
-ip = "192.168.0.29"                                             # ip변수 생성
+ip = "192.168.0.31"                                             # ip변수 생성
 port = 5000                                                     # port변수 생성
 
 

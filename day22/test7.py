@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup as bs  #bs4에서 불러오는 데 beautifulsoup을 불러오고 bs라는 별칭을 준다. 
 from pprint import pprint  #pprint에서 pprint을 가져온다. 
-import requests
+import requests #requests를 불러옴. 
 from pathlib import Path
 headers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36"}
 #헤더쓰는 대소문장 user agent는 옆의 것

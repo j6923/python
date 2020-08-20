@@ -1,9 +1,9 @@
-import requests
+import requests   #requests를 불러옴 
 
-url = "https://search.naver.com/search.naver?query=날씨"
+url = "https://search.naver.com/search.naver?query=날씨"    #url를 
 res = requests.get(url)
-res.raise_for_status()
-print(res.text)
+res.raise_for_status() 
+print(res.text)  #res의 text를 출력한다.(가져온다)
 
 #브라우저내에서 바꿀수 있음 
 

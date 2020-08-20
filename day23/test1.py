@@ -1,5 +1,5 @@
 import requests  #리퀘스트를 불러옴. 
-from bs4 import BeautifulSoup as bs #bs4에서 BeautifulSoup을 가져오고 bs라고 별칭 줌. 
+from bs4 import BeautifulSoup as bs #bs4에서 BeautifulSoup을 가져오고 bs라고 별칭 줌. beautifulsoup는 보기좋게 만들어 주는 애 
 
 from pprint import pprint  #pprint에서 pprint를 불러옴. 
 
@@ -13,7 +13,7 @@ res = requests.get(url)   #url을 요청함.
 #에러가 발생한다면 에러 메세지 출력후 종료 아니라면 하위에 코드를 실행
 res.raise_for_status()   
 
-pprint(res.text)      
+pprint(res.text)      #
 
 #깔끔하게 하기위 해 
 soup = bs(res.text,'lxml') #Beatiful #bs에서 res #이게.... 

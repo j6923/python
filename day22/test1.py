@@ -8,7 +8,7 @@ url = "http://www.naver.com"  #"http://www.naver.com"을 url에 대입해라.
 res = requests.get(url)  #url로 get방식으로 요청합니다. 
 #아 주소로 get방식으로 url요청합니다. 
 
-#200정상죈 
+#200정상값  
 
 
 # print(res)
