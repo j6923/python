@@ -17,35 +17,35 @@ P = Human("팽수", 20, "직장인")
 P. status()
 
 print("--------------------------------------------------")
-d = Human("둘리", 100000000, "백수")
-d.status()
+d = Human("둘리", 100000000, "백수")  #Human에 매게변수 둘리 100000000 백수를 매게변수로 주고 d에 대입
+d.status()  #d의 status 호출
 
 
-# class car:
-#     def __init__(self):
-#         print("초기화함수")
-#         self.company = '현대'
-#         self.name = 'Sonata'
-#         self.color = 'red'
-#         self.year = '1년'
-#         self.wheel = 1
-#         self.handle = 1
-#     def forward(self):
-#         print("전진하자")
-#     def back(self):
-#         print("후진")
-#     def light(self):
-#         print("깜박깜박")
-#     def fast(self):
-#         print("가속")
-#     def slow(self):
-#         print("감속")
-#     def stop(self):
-#         print("정지")
+# class car: #car 라는 클래스를 만듦
+#     def __init__(self):  #초기화함
+#         print("초기화함수") #초기화함수를 호출
+#         self.company = '현대' #class car의 company석성을 현대로 함
+#         self.name = 'Sonata' #속성 name을 Sonata로 함
+#         self.color = 'red' #속성 color을 red로 함.
+#         self.year = '1년' #속성 year을 1년으로 함
+#         self.wheel = 1 #속성 wheel을 1로 함
+#         self.handle = 1  #속성 handle을 1로 함.
+#     def forward(self):  #동작 forward를 함수로 만듦
+#         print("전진하자")  #함수가 호출되면 전진하자 출력
+#     def back(self): #함수 back을 만듦
+#         print("후진") #함수가 호출되면 후진출력
+#     def light(self): #동작 light를 함수로 만듦
+#         print("깜박깜박") #함수가 호출되면 깜박깜박출력
+#     def fast(self): #동작을 fast라는 함수로 만듦.
+#         print("가속") #함수가 호출되면 가속 출력
+#     def slow(self): #동작 slow를 함수로 만듦
+#         print("감속") #함수가 호출되면 감속 출력
+#     def stop(self): 동작 stop을 함수로 민듦
+#         print("정지") #함수가 호출되면 정지 출력
 
-# s = car()
-# print(s.name)
-# print(s.company)
+# s = car() #c인스턴스를 만듦
+# print(s.name) #s의 이름을 출력
+# print(s.company) 
 # print(s.color)
 # print(s.year)
 # print(s.wheel)
