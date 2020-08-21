@@ -30,7 +30,7 @@ pyautogui.scroll(-1500) # 아래로 -1000만큼 스크롤
 
 #제목을 얻어옴 
 for i in range(1,21):
-    ulELem = browser.find_element_by_css_selector("#place_main_ct > div > div > div.sc_box.place_list > div.list_area > ul") 
+    ulELem = browser.find_element_by_css_selector("#place_main_ct > div > div > div.sc_box.place_list > div.list_area > ul") #전체 메뉴
     #print(ulELem)
     lists = ulELem.find_elements_by_css_selector(".list_item.type_restaurant") #클래스 명이니까 .들어감. css선택잨슬 때 .으로 지칭 동시에 클래스 #CSS에서 .클래스는 .이어서 클래스 2개 들어가 있음.  #클래스는 동시에 여러개 줄 수 있음. css...spss써도 됨. 
     for store in lists:    
