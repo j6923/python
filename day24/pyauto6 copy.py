@@ -1,5 +1,5 @@
 #자바 스크립트로 데이터를 가져오려고요.                                                      #클릭해주는 것을 해줘야 하는데 자동으로 클릭하는 것으로 하지 않으면 하나만 가져오게 됨. 
-from selenium import webdriver #selenium에서 webdriver을 가져와                            #주소창이 한글이면 에러남. 그래서 이렇게 그래서 이렇게 함. 
+from selenium import webdriver #selenium에서 webdriver을 가져와                            #주소창이 한글이면 에러남. 그래서 이렇게 함. 
 
 from selenium.webdriver.common.keys import Keys  #selenium.webdriver.common.keys에서 keys가져와 
 
@@ -35,8 +35,8 @@ for i in range(1,21):
     lists = ulELem.find_elements_by_css_selector(".list_item.type_restaurant") #클래스 명이니까 .들어감. css선택잨슬 때 .으로 지칭 동시에 클래스 #CSS에서 .클래스는 .이어서 클래스 2개 들어가 있음.  #클래스는 동시에 여러개 줄 수 있음. css...spss써도 됨. 
     for store in lists:    
         print(store.find_element_by_css_selector("div.tit > span > a > span").text) #한 애의 글자를 가져와  #앞의 것만 써서 전체 맛집 크롤링
-        #print("-----------------------#_business_33068253 > div > div > div.tit > span > a---------------------------------------") #한개씩 뜰때마다 "----------------"출력 
-#div방에 클래스 이름을 줬는데 그 이름이 tit 그 하위 span으로 둘어쌓여저 있고 그 아래 a태그로 둘러쌓여져 있어. text는 그 안의 있는 값을 가져와  
+        #print("--------------------------------------------------------------") #한개씩 뜰때마다 "----------------"출력 
+
     pyautogui.click(765,580)  #x좌표 765, y좌표 599클릭하게 함. 
     print("-------------------------------------------------")  #"------------------"을 출력 
     #time.sleep(3) #a.json으로 가져와 시간 지연됨 
