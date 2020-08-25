@@ -16,7 +16,7 @@ class paint(QWidget):
         leftbox = QVBoxLayout()
         rightbox = QVBoxLayout()
         #그룹박스 1 
-        gb = QGroupBox("음식의 종류")
+        gb = QGroupBox("")
         leftbox.addWidget(gb)
         box1 = QVBoxLayout()
         frmbox.addLayout(leftbox)
@@ -29,7 +29,7 @@ class paint(QWidget):
         box1.addWidget(QRadioButton("디저트",self))
         
         #그룹박스 2 
-        gb1 = QGroupBox("메뉴")
+        gb1 = QGroupBox("")
         leftbox.addWidget(gb1)
         frmbox.addLayout(leftbox)
         frmbox.addLayout(rightbox)
@@ -46,13 +46,19 @@ class paint(QWidget):
         
         self.view = CGView(self) 
         rightbox.addWidget(self.view) 
+        
+
+        self.view = CGView1(self) 
+        rightbox.addWidget(self.view) 
         self.show()
 
+        
 
-        gb2 = QGroupBox("지도")
-        leftbox.addWidget(gb2)
-        frmbox.addLayout(leftbox)
-        frmbox.addLayout(rightbox)
+
+        # gb2 = QGroupBox("지도")
+        # leftbox.addWidget(gb2)
+        # frmbox.addLayout(leftbox)
+        # frmbox.addLayout(rightbox)
 class CGView(QGraphicsView):
     def __init__(self,parent):
         super().__init__(parent)  
@@ -62,7 +68,17 @@ class CGView(QGraphicsView):
         self.items = []
         self.start = QPointF()
         self.end = QPointF()   
+class CGView1(QGraphicsView):
+    def __init__(self,parent):
+        super().__init__(parent)  
+        self.scene = QGraphicsScene() 
+        self.setScene(self.scene)
+
+        self.items = []
+        self.start = QPointF()
+        self.end = QPointF()   
         
+
 
 if __name__== "__main__":
     app = QApplication(sys.argv)

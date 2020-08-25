@@ -18,7 +18,7 @@ class paint(QWidget):
         #그룹박스 1 
         gb = QGroupBox("음식의 종류")
         leftbox.addWidget(gb)
-        box1 = QVBoxLayout()
+        box1 = QHBoxLayout()
         frmbox.addLayout(leftbox)
         box1.addLayout(rightbox)
         gb.setLayout(box1)
@@ -33,7 +33,7 @@ class paint(QWidget):
         leftbox.addWidget(gb1)
         frmbox.addLayout(leftbox)
         frmbox.addLayout(rightbox)
-        box2 = QVBoxLayout()
+        box2 = QHBoxLayout()
         gb1.setLayout(box2)
         gb1.setLayout(box2)
         box2.addWidget(QCheckBox("닭볶음탕",self))
@@ -46,7 +46,13 @@ class paint(QWidget):
         
         self.view = CGView(self) 
         rightbox.addWidget(self.view) 
+        
+
+        self.view = CGView1(self) 
+        rightbox.addWidget(self.view) 
         self.show()
+
+        
 
 
         gb2 = QGroupBox("지도")
@@ -62,7 +68,17 @@ class CGView(QGraphicsView):
         self.items = []
         self.start = QPointF()
         self.end = QPointF()   
+class CGView1(QGraphicsView):
+    def __init__(self,parent):
+        super().__init__(parent)  
+        self.scene = QGraphicsScene() 
+        self.setScene(self.scene)
+
+        self.items = []
+        self.start = QPointF()
+        self.end = QPointF()   
         
+
 
 if __name__== "__main__":
     app = QApplication(sys.argv)

@@ -31,7 +31,7 @@ class MyApp(QWidget): #얘를 상속받은 클래스 됨, 나도 위잿이 될 �
         box1.addWidget(QRadioButton("사각형",self)) #위젯 넣어줄 수 있음 qradio 
         box1.addWidget(QRadioButton("타원",self)) #위젯 넣어줄 수 있음 qradio 
 
-       
+    
         #그룹박스 2 
         gb2 = QGroupBox("Pen setting")
         leftbox.addWidget(gb2) #그룹박스 2번째 

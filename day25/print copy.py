@@ -44,25 +44,9 @@ class paint(QWidget):
         box2.addWidget(QCheckBox("백숙",self))
         
         
-        self.view = CGView(self) 
-        rightbox.addWidget(self.view) 
-        self.show()
-
-
-        gb2 = QGroupBox("지도")
-        leftbox.addWidget(gb2)
-        frmbox.addLayout(leftbox)
-        frmbox.addLayout(rightbox)
-class CGView(QGraphicsView):
-    def __init__(self,parent):
-        super().__init__(parent)  
-        self.scene = QGraphicsScene() 
-        self.setScene(self.scene)
-
-        self.items = []
-        self.start = QPointF()
-        self.end = QPointF()   
         
+
+        self.show()
 
 if __name__== "__main__":
     app = QApplication(sys.argv)
