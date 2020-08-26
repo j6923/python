@@ -1,12 +1,12 @@
 #이번에는 종게임 
 
 #게임의 기본 틀 
-import pygame
-import math 
-import random
+import pygame     #pygame을 불러온다.
+import math       #math를 불러온다.
+import random     #램덤을 불러온다.
 
 #초기화 하기전 초기화 해줘야함. 
-pygame.init()
+pygame.init()     
 #미사일과 충돌 테스트 
 def pythagoras(x1,y1,x2,y2):
     return math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)) #x측y측간의 차이의 제곱 #자꾸 불러쓰면 소스가 엉키게 됨. 
