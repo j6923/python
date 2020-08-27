@@ -15,6 +15,7 @@ def pythagoras(x1,y1,x2,y2):
 pygame.mixer.music.load("e:/dev/python_workspace/img/sounds/backsound.mp3")
 pygame.mixer.music.set_volume(0.2)#0~0.1 볼륨 
 
+Pygame에 음악을 하는데 볼륨을 0.2로 지정
 pygame.mixer.music.play(1) #1,play once  
 
 
